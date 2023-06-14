@@ -39,8 +39,7 @@ module Authenticate
   end
 
   def authenticate
-    Current.app_session = authenticate_using_cookie ||
-                          authenticate_using_token
+    Current.app_session = authenticate_using_cookie #|| authenticate_using_token
 
     Current.user = Current.app_session&.user
   end
